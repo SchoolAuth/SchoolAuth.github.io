@@ -1,0 +1,52 @@
+<HTML> 
+    <HEAD> 
+    <TITLE>Password Required</TITLE> 
+    </HEAD>
+    
+    <SCRIPT LANGUAGE="JavaScript"> 
+    <!--
+    
+    function SubmitPassword(frm) 
+    { 
+    // 
+    // Get the value entered into the text box 
+    // 
+    var password = frm.pw.value 
+    // 
+    // Convert it to lowercase 
+    // 
+    password = password.toLowerCase() 
+    // 
+    // Add the .htm extension 
+    // 
+    var loc = password + ".htm" 
+    // 
+    // Make sure the user entered something 
+    // 
+    if (password != "") 
+    { 
+    // 
+    // If so, send the browser there 
+    // 
+    opener.location.href = loc 
+    } 
+    // 
+    // Close this window 
+    // 
+    window.close() 
+    }
+    
+    //--> 
+    </SCRIPT>
+    
+    <BODY BGCOLOR="#CCCCCC">
+    
+    <FORM> 
+    <p>This page requires a password</p><BR> 
+    <INPUT TYPE="TEXT" NAME="pw" SIZE=15> 
+    <INPUT TYPE="BUTTON" VALUE="OK" 
+    onClick="SubmitPassword(this.form)"> 
+    </FORM>
+        
+    </BODY> 
+    </HTML>
